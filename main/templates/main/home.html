@@ -1,0 +1,103 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="description" content="Портфолио разработчика: проекты на JavaScript и Django.">
+  <title>ФИО — веб-разработчик</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="На главную"><span class="brand-mark">W<span>.</span></span><span>Анзорье С<span class="brand-dot">.</span> Д<span class="brand-dot">.</span></span></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="header-link" href="mailto:example@mail.ru">Написать мне <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="live-dot"></span> ПОРТФОЛИО / JAVASCRIPT + DJANGO</span>
+          <p class="hero-intro">Привет, меня зовут Анзорье Симон Дмитриевич</p>
+          <h1 id="hero-title">Создаю сайты<br>от идеи до <em>запуска.</em></h1>
+          <p class="hero-description">В этом портфолио — JavaScript-сайт, блог и сайт с покупками на Django. Посмотрите проекты и свяжитесь со мной.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Смотреть проекты <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="mailto:example@mail.ru">Связаться со мной <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-top"><span class="art-dots"><i></i><i></i><i></i></span><span>web / django</span></div>
+          <div class="art-center"><span class="art-orbit orbit-one"></span><span class="art-orbit orbit-two"></span><span class="art-letter">W<span>.</span></span></div>
+          <div class="art-bottom"><span>FRONTEND × BACKEND</span><span>↗ 2026</span></div>
+        </div>
+        <div class="hero-index" aria-hidden="true">01 — ВВЕДЕНИЕ</div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="section-label"><span>01 / ОБО МНЕ</span><span class="label-rule"></span></div>
+        <div class="about-grid">
+          <h2 id="about-title">Интерфейс.<br><span>Логика. Сайт.</span></h2>
+          <div class="about-copy"><p>Я создаю веб-проекты и изучаю JavaScript и Django. Мне интересны удобные интерфейсы и понятная структура приложений.</p><p>Здесь можно посмотреть мои работы.</p><div class="skill-list" aria-label="Технологии"><span>HTML / CSS</span><span>JavaScript</span><span>Python</span><span>Django</span><span>VueJS</span></div></div>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects" aria-labelledby="projects-title">
+        <div class="section-label"><span>02 / ИЗБРАННЫЕ РАБОТЫ</span><span class="label-rule"></span><span>01 — 04</span></div>
+        <div class="section-heading"><h2 id="projects-title">Мои проекты<span>.</span></h2><p>Проекты с интерфейсом и серверной частью.</p></div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-visual visual-blog" aria-hidden="true">
+              <div class="mock-browser">
+                <img src="{% static '/images/1.png' %}" alt="">
+              </div>
+              <span class="visual-number">01</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-type">DJANGO / ВЕБ</span>
+                <h3>Community-платформа</h3>
+                <p>Веб-сайт на Django с новостями и статьями.</p>
+              </div>
+              <a class="project-link" target='_blank' href="https://simpy.up.railway.app/" title="Перейти на сайт">↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual visual-laravel" aria-hidden="true">
+              <div class="mock-browser">
+                <img src="{% static '/images/2.png' %}" alt="">
+              </div>
+              <span class="visual-number">02</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-type">DJANGO / КОНТЕНТ</span>
+                <h3>Блог на Django</h3>
+                <p>Веб-блог для публикации и монетизации курсов.</p>
+              </div>
+              <a class="project-link" target='_blank' href="https://my-upskill.up.railway.app/" title="Перейти на сайт">↗</a>
+            </div>
+          </article>
+          
+          <article class="project-card"><div class="project-visual visual-wordpress" aria-hidden="true"><div class="mock-browser"><div class="mock-toolbar"><i></i><i></i><i></i><b></b></div><div class="mock-store"><div class="mock-line medium"></div><div class="mock-products"><span><i></i><b></b></span><span><i></i><b></b></span><span><i></i><b></b></span></div></div></div><span class="visual-number">03</span></div><div class="project-info"><div><span class="project-type">DJANGO / МАГАЗИН</span><h3>Сайт с покупками</h3><p>Проект с каталогом товаров на Django.</p></div><a class="project-link" href="#" aria-label="Указать ссылку на сайт с покупками" title="Замените # на ссылку проекта">↗</a></div></article>
+          
+          <article class="project-card"><div class="project-visual visual-shop" aria-hidden="true"><div class="next-project" aria-hidden="true"><span>+</span><strong>Ваш следующий проект</strong></div><span class="visual-number">04</span></div><div class="project-info"><div><span class="project-type">ВАШ СЛЕДУЮЩИЙ ПРОЕКТ</span><h3>Добавьте свой проект</h3><p>Замените эту карточку своим сайтом.</p></div><a class="project-link" href="#" aria-label="Указать ссылку на свой проект" title="Замените # на ссылку проекта">↗</a></div></article>
+        </div>
+      </section>
+
+      <section class="contact section" id="contacts" aria-labelledby="contact-title"><div class="section-label"><span>03 / КОНТАКТЫ</span><span class="label-rule"></span></div><div class="contact-body"><div><span class="eyebrow">ЕСТЬ ИДЕЯ?</span><h2 id="contact-title">Давайте создадим<br><em>что-то интересное.</em></h2><p>Напишите мне, и мы обсудим ваш проект.</p></div><a class="contact-button" href="mailto:example@mail.ru" aria-label="Отправить письмо на example@mail.ru">↗</a></div><div class="contact-details"><a href="mailto:example@mail.ru">example@mail.ru</a><a href="tel:+00000000000">+0 (000) 000-00-00</a></div></section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="#top"><span class="brand-mark">W<span>.</span></span><span>ФИО<span class="brand-dot">.</span></span></a><span>Портфолио веб-разработчика</span><a href="#top">Наверх ↑</a></footer>
+  </div>
+</body>
+</html>
