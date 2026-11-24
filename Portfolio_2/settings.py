@@ -66,7 +66,11 @@ WSGI_APPLICATION = 'Portfolio_2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': (
+            '/app/data/db.sqlite3'
+            if os.environ.get('RAILWAY_ENVIRONMENT')
+            else os.path.join(BASE_DIR, 'db.sqlite3')
+        ),
     }
 }
 
@@ -111,7 +115,11 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = (
+    '/app/data/media'
+    if os.environ.get('RAILWAY_ENVIRONMENT')
+    else os.path.join(BASE_DIR, 'media')
+)
 
 CSRF_TRUSTED_ORIGINS = [
 	"https://portfolio-anzore.up.railway.app/",
