@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101113">
   <meta name="description" content="Портфолио разработчика: проекты на JavaScript и Django.">
+  <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
   <title>Анзорье Симон Дмитриевич — веб-разработчик</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
@@ -29,10 +30,10 @@
           <span class="eyebrow"><span class="live-dot"></span> ПОРТФОЛИО / JAVASCRIPT + DJANGO</span>
           <p class="hero-intro">Привет, меня зовут Анзорье Симон Дмитриевич</p>
           <h1 id="hero-title">Создаю сайты<br>от идеи до <em>запуска.</em></h1>
-          <p class="hero-description">В этом портфолио — JavaScript-сайт, блог и сайт с покупками на Django. Посмотрите проекты и свяжитесь со мной.</p>
+          <p class="hero-description">В этом портфолио — community-платформа, блог и сайт с покупками на Django. Посмотрите проекты и свяжитесь со мной.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#projects">Смотреть проекты <span aria-hidden="true">↗</span></a>
-            <a class="button button-ghost" href="mailto:example@mail.ru">Связаться со мной <span aria-hidden="true">→</span></a>
+            <a class="button button-ghost" href="#contacts">Связаться со мной <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="hero-art" aria-hidden="true">
@@ -55,6 +56,7 @@
         <div class="section-label"><span>02 / ИЗБРАННЫЕ РАБОТЫ</span><span class="label-rule"></span><span>01 — 04</span></div>
         <div class="section-heading"><h2 id="projects-title">Мои проекты<span>.</span></h2><p>Проекты с интерфейсом и серверной частью.</p></div>
         <div class="project-grid">
+
           <article class="project-card">
             <div class="project-visual visual-blog" aria-hidden="true">
               <div class="mock-browser">
@@ -66,7 +68,7 @@
               <div>
                 <span class="project-type">DJANGO / ВЕБ</span>
                 <h3>Community-платформа</h3>
-                <p>Веб-сайт на Django с новостями и статьями.</p>
+                <p>Веб-сайт на Django с новостями и статьями (адаптирован под любые устройства).</p>
               </div>
               <a class="project-link" target='_blank' href="https://simpy.up.railway.app/" title="Перейти на сайт">↗</a>
             </div>
@@ -83,19 +85,50 @@
               <div>
                 <span class="project-type">DJANGO / КОНТЕНТ</span>
                 <h3>Блог на Django</h3>
-                <p>Веб-блог для публикации и монетизации курсов.</p>
+                <p>Веб-блог для публикации и монетизации курсов (адаптирован под любые устройства).</p>
               </div>
               <a class="project-link" target='_blank' href="https://my-upskill.up.railway.app/" title="Перейти на сайт">↗</a>
             </div>
           </article>
           
-          <article class="project-card"><div class="project-visual visual-wordpress" aria-hidden="true"><div class="mock-browser"><div class="mock-toolbar"><i></i><i></i><i></i><b></b></div><div class="mock-store"><div class="mock-line medium"></div><div class="mock-products"><span><i></i><b></b></span><span><i></i><b></b></span><span><i></i><b></b></span></div></div></div><span class="visual-number">03</span></div><div class="project-info"><div><span class="project-type">DJANGO / МАГАЗИН</span><h3>Сайт с покупками</h3><p>Проект с каталогом товаров на Django.</p></div><a class="project-link" href="#" aria-label="Указать ссылку на сайт с покупками" title="Замените # на ссылку проекта">↗</a></div></article>
+          <article class="project-card">
+            <div class="project-visual visual-wordpress" aria-hidden="true">
+              <div class="mock-browser">
+                <img src="{% static '/images/3.png' %}" alt="">
+              </div>
+              <span class="visual-number">03</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-type">DJANGO REST / МАГАЗИН</span>
+                <h3>Сайт с покупками</h3>
+                <p>Проект с каталогом товаров на Django и VueJS (не адаптирован).</p>
+              </div>
+              <a class="project-link" target='_blank' href="https://anzore-shop.up.railway.app/" title="Перейти на сайт">↗</a>
+            </div>
+          </article>
           
-          <article class="project-card"><div class="project-visual visual-shop" aria-hidden="true"><div class="next-project" aria-hidden="true"><span>+</span><strong>Ваш следующий проект</strong></div><span class="visual-number">04</span></div><div class="project-info"><div><span class="project-type">ВАШ СЛЕДУЮЩИЙ ПРОЕКТ</span><h3>Добавьте свой проект</h3><p>Замените эту карточку своим сайтом.</p></div><a class="project-link" href="#" aria-label="Указать ссылку на свой проект" title="Замените # на ссылку проекта">↗</a></div></article>
+          <article class="project-card">
+            <div class="project-visual visual-shop" aria-hidden="true">
+              <div class="next-project" aria-hidden="true">
+                <span>...</span><strong>Скоро</strong>
+              </div>
+              <span class="visual-number">04</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-type">МЕСТО ДЛЯ БУДУЩИХ ПРОЕКТОВ</span>
+                <h3>Новый проект</h3>
+                <p>Скоро здесь появится новая работа.</p>
+              </div>
+              
+            </div>
+          </article>
+        
         </div>
       </section>
 
-      <section class="contact section" id="contacts" aria-labelledby="contact-title"><div class="section-label"><span>03 / КОНТАКТЫ</span><span class="label-rule"></span></div><div class="contact-body"><div><span class="eyebrow">ЕСТЬ ИДЕЯ?</span><h2 id="contact-title">Давайте создадим<br><em>что-то интересное.</em></h2><p>Напишите мне, и мы обсудим ваш проект.</p></div><a class="contact-button" href="mailto:simonanzore@gmail.com" aria-label="Отправить письмо на simonanzore@gmail.com">↗</a></div><div class="contact-details"><a href="mailto:simonanzore@gmail.com">simonanzore@gmail.com</a><a href="https://t.me/s_anz77">t.me/s_anz77</a></div></section>
+      <section class="contact section" id="contacts" aria-labelledby="contact-title"><div class="section-label"><span>03 / КОНТАКТЫ</span><span class="label-rule"></span></div><div class="contact-body"><div><span class="eyebrow">ЕСТЬ ИДЕЯ?</span><h2 id="contact-title">Давайте создадим<br><em>что-то интересное.</em></h2><p>Напишите мне, и мы обсудим ваш проект.</p></div><a class="contact-button" target='blank_' href="mailto:simonanzore@gmail.com" aria-label="Отправить письмо на simonanzore@gmail.com">↗</a></div><div class="contact-details"><a href="mailto:simonanzore@gmail.com" target='blank_'>simonanzore@gmail.com</a><a href="https://t.me/s_anz77" target='blank_'>t.me/s_anz77</a></div></section>
     </main>
     <footer class="site-footer"><a class="brand" href="#top"><span class="brand-mark">W<span style='color: var(--accent)'>.</span></span><span>Анзорье С. Д.</span></span></a><span>Портфолио веб-разработчика</span><a href="#top">Наверх ↑</a></footer>
   </div>
